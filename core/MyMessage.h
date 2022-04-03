@@ -34,6 +34,7 @@
 #ifdef __cplusplus
 #include <Arduino.h>
 #include <stdint.h>
+#include <dtostrf.h>
 #endif
 
 #define V2_MYS_HEADER_PROTOCOL_VERSION      (2u) //!< Protocol version
