@@ -26,7 +26,7 @@ extern "C" void system_init(void);
 
 int main(void)
 {
-	system_init();
+	//system_init();
 
 #if defined(USBCON)
 	__libc_init_array();

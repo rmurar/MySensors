@@ -86,9 +86,13 @@ bool hwInit(void)
     return true;
 }
 
+extern void kick_watchdog(void);
+
 void hwWatchdogReset(void)
 {
-	// TODO: Not supported!
+#ifndef DISABLE_WATCHDOG
+        kick_watchdog();
+#endif
 }
 
 void hwReboot(void)

@@ -117,7 +117,7 @@ uint8_t hwReadConfig(const int addr);
 #ifdef MY_SOFTSPI
 #error Soft SPI is not available on this architecture!
 #endif
-#define hwSPI SPI //!< hwSPI
+#define hwSPI SPI_RF //!< hwSPI
 
 
 /**
