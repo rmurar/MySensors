@@ -21,13 +21,15 @@
 
 extern "C" void __libc_init_array(void);
 
-extern "C" void system_init(void);
+void serialEventRun(void) __attribute__((weak));
+void initVariant(void) __attribute__((weak));
+void setup(void);
+void loop(void);
 
+extern "C" void SYS_TimerTaskHandler(void) __attribute__((weak));
 
 int main(void)
 {
-	//system_init();
-
 #if defined(USBCON)
 	__libc_init_array();
 	USBDevice.init();
